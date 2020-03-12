@@ -376,9 +376,9 @@ GameObject:
   m_Component:
   - component: {fileID: 781593545}
   - component: {fileID: 781593544}
-  - component: {fileID: 781593546}
   - component: {fileID: 781593548}
   - component: {fileID: 781593547}
+  - component: {fileID: 781593546}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 781593543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aad4799d0f55e3a4e8ee74a2f6968f48, type: 3}
+  m_Script: {fileID: 11500000, guid: dee8a11fd58ebc347afb49ac7bfb30a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &781593547
@@ -519,9 +519,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1059460347}
   - component: {fileID: 1059460346}
-  - component: {fileID: 1059460345}
   - component: {fileID: 1059460344}
   - component: {fileID: 1059460348}
+  - component: {fileID: 1059460345}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059460343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5aeeecefbebaa488fa12535e52eca8, type: 3}
+  m_Script: {fileID: 11500000, guid: cfe7e1012813bf74bafc8a768f125982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &1059460346
