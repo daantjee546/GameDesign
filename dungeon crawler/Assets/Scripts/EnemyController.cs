@@ -18,25 +18,25 @@ public class EnemyController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 position = this.transform.position;
-            position.x -= 0.05f;
+            position.x -= 0.1f;
             this.transform.position = position;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             Vector3 position = this.transform.position;
-            position.x += 0.05f;
+            position.x += 0.1f;
             this.transform.position = position;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             Vector3 position = this.transform.position;
-            position.y += 0.05f;
+            position.y += 0.1f;
             this.transform.position = position;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Vector3 position = this.transform.position;
-            position.y -= 0.05f;
+            position.y -= 0.1f;
             this.transform.position = position;
         }
     }
@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        HealthBarHandlerEnemy.SetHealthBarValue(HealthBarHandlerEnemy.GetHealthBarValue() - 0.08f);
+        HealthBarHandlerEnemy.SetHealthBarValue(HealthBarHandlerEnemy.GetHealthBarValue() - 0.1f);
         if (HealthBarHandlerEnemy.GetHealthBarValue() <= 0)
         {
             Destroy(gameObject);
