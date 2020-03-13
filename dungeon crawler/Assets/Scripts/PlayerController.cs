@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,10 +9,14 @@ public class PlayerController : MonoBehaviour
 
     //private Rigidbody2D rb;
 
+    public Text ResetText;
+    //private Rigidbody2D rb;
+
     private void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
         HealthBarHandler.SetHealthBarValue(1);
+
     }
     void Update()
     {
