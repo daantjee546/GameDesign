@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7249688393454043886}
   - component: {fileID: 439699028988243833}
+  - component: {fileID: -5048750406905533569}
   m_Layer: 0
   m_Name: LRB
   m_TagString: Untagged
@@ -78,6 +79,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a156d65ee61f346a40c10d603928ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5048750406905533569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249688393454043887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aec3ae9cfe21847a07c5279ff0aef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5179952228699936692, guid: 82587f54a895baf4da0c9b8720bf7d9e, type: 3}
+  spawnRate: 2
 --- !u!1 &7419395042251710140
 GameObject:
   m_ObjectHideFlags: 0

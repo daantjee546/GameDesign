@@ -46,6 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5813066381651194320}
   - component: {fileID: -8579769197097134304}
+  - component: {fileID: -6935202240375735293}
   m_Layer: 0
   m_Name: LT
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a156d65ee61f346a40c10d603928ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6935202240375735293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186108607395898099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aec3ae9cfe21847a07c5279ff0aef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5179952228699936692, guid: 82587f54a895baf4da0c9b8720bf7d9e, type: 3}
+  spawnRate: 2
 --- !u!1 &7090331186198695590
 GameObject:
   m_ObjectHideFlags: 0
