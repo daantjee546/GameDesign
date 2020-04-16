@@ -147,5 +147,8 @@ MonoBehaviour:
   youDied: {fileID: 0}
   projectile: {fileID: 1035453971988896584, guid: de431b9699c6d3a49803c160afae4d60,
     type: 3}
+  specialProjectile: {fileID: 257136543930234244, guid: 9e570a36b8475204eb4b1e38b3037819,
+    type: 3}
   offset: 0
   cooldown: 1
+  specialCooldown: 5

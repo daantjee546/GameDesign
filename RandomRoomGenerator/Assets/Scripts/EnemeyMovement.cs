@@ -15,7 +15,7 @@ public class EnemeyMovement : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, target.position) < 3 && Vector2.Distance(transform.position, target.position) > 0.5)
+        if(Vector2.Distance(transform.position, target.position) < 4 && Vector2.Distance(transform.position, target.position) > 0.5)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }

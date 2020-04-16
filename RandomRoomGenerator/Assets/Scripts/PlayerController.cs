@@ -11,9 +11,13 @@ public class PlayerController : MonoBehaviour
     public Image youDied;
 
     public GameObject projectile;
+    public GameObject specialProjectile;
+
     public float offset;
     public float cooldown = 1.0f;
+    public float specialCooldown = 1.0f;
     private float nextFire;
+    private float nextSpecialFire;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButton(0) && Time.time > nextFire)
         {
-
             Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
             Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
             Vector2 direction = target - myPos;
@@ -40,6 +43,21 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectile, transform.position, rotation);
             nextFire = Time.time + cooldown;
         }
+
+        else if(Input.GetKeyDown("space") && Time.time > nextSpecialFire)
+        {
+            Debug.Log("SPACE PRESSED...");
+            Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+            Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
+            Vector2 direction = target - myPos;
+            direction.Normalize();
+            Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + -90f);
+            
+            Instantiate(specialProjectile, transform.position, rotation);
+            
+            nextSpecialFire = Time.time + specialCooldown;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

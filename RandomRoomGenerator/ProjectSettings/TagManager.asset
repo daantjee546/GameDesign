@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - BossRoom
   - Boss
+  - enemyBullet
   layers:
   - Default
   - TransparentFX
