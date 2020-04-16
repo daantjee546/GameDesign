@@ -21,6 +21,7 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
         // check if in range
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);
         if (distanceToPlayer < attackRange)
         {
@@ -36,7 +37,7 @@ public class EnemyAttack : MonoBehaviour
 
                 if (true)
                 {
-                    Debug.Log("HIT PLAYER....");
+                    //Debug.Log("HIT PLAYER....");
                     // hit the player
                     GameObject newAttack = Instantiate(projectile, transform.position, transform.rotation);
                     newAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, attackForce));

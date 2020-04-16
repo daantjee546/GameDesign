@@ -11,7 +11,7 @@ public class Projectilecontroller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        Destroy(this.gameObject, 0.5f);
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Projectile2BossController : MonoBehaviour
 {
@@ -19,27 +20,29 @@ public class Projectile2BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position + transform.right, transform.right * attackRange, Color.green);
-        Debug.DrawRay(transform.position + -transform.right, -transform.right * attackRange, Color.green);
-
-        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + transform.right, transform.right, attackRange);
-        RaycastHit2D hitRight = Physics2D.Raycast(transform.position + transform.right, -transform.right, attackRange);
-
-        if (hitLeft.collider.tag == "Player")
+        try
         {
-            // hit the player
-            GameObject newAttack = Instantiate(duplicatedProjectile, transform.position, transform.rotation);
-            newAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, attackForce));
-            Destroy(gameObject);
+            Debug.DrawLine(transform.position + transform.right, transform.right * attackRange, Color.green);
+            Debug.DrawLine(transform.position + -transform.right, -transform.right * attackRange, Color.green);
+
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position + transform.right, transform.right, attackRange);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position + -transform.right, -transform.right, attackRange);
+
+            if (hitRight.collider.tag == "Player")
+            {
+                Instantiate(duplicatedProjectile, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            if (hitLeft.collider.tag == "Player")
+            {
+                Instantiate(duplicatedProjectile, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
-        if (hitRight.collider.tag == "Player")
+        catch (NullReferenceException)
         {
-            GameObject newAttack = Instantiate(duplicatedProjectile, transform.position, transform.rotation);
-            newAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, attackForce));
-            Destroy(gameObject);
+            
         }
-        Debug.Log(hitLeft.collider.tag);
-        Debug.Log(hitRight.collider.tag);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

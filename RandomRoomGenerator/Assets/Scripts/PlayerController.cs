@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public float offset;
     public float cooldown = 1.0f;
     public float specialCooldown = 1.0f;
+
+    static float livesValue = 1;
+
     private float nextFire;
     private float nextSpecialFire;
 
@@ -23,7 +27,18 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        HealthBarHandler.SetHealthBarValue(1);
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Scene1")
+        {
+            HealthBarHandler.SetHealthBarValue(1);
+        }
+        else if (sceneName == "BossScene")
+        {
+            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue());
+        }
     }
 
     // Update is called once per frame
@@ -46,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
         else if(Input.GetKeyDown("space") && Time.time > nextSpecialFire)
         {
-            Debug.Log("SPACE PRESSED...");
+            //Debug.Log("SPACE PRESSED...");
             Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
             Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
             Vector2 direction = target - myPos;
@@ -60,17 +75,20 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Boss")
+        if (collision.gameObject.tag == "Enemy")
         {
-            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.1f);
+            //Debug.Log("HIT PLAYER....");
+            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.05f);
         }
 
         if (HealthBarHandler.GetHealthBarValue() <= 0)
         {
             youDied.enabled = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
+
 }
