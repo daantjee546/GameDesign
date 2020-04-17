@@ -35,7 +35,6 @@ public class BossAttack : MonoBehaviour
     public float attackForce;
     public float attack2Force;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentState = bossStates.idle;
@@ -43,10 +42,8 @@ public class BossAttack : MonoBehaviour
         lastAttackTime = Time.time;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // check if in range
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);
         if (distanceToPlayer < attackRange)
         {

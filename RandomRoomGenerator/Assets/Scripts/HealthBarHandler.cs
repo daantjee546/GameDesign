@@ -7,13 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class HealthBarHandler : MonoBehaviour
 {
-    private static Image HealthBarImage;
-    static float lives = 0;
+    public static Image HealthBarImage;
+    static float lives = 1;
 
-    /// <summary>
-    /// Sets the health bar value
-    /// </summary>
-    /// <param name="value">should be between 0 to 1</param>
     public static void SetHealthBarValue(float value)
     {
         try
@@ -36,27 +32,32 @@ public class HealthBarHandler : MonoBehaviour
         {
 
         }
+        catch (MissingReferenceException)
+        {
 
-        
+        }
+
+
     }
 
     public static float GetHealthBarValue()
     {
-        return HealthBarImage.fillAmount;
+        try
+        {
+            return HealthBarImage.fillAmount;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
     }
 
-    /// <summary>
-    /// Sets the health bar color
-    /// </summary>
-    /// <param name="healthColor">Color </param>
     public static void SetHealthBarColor(Color healthColor)
     {
         HealthBarImage.color = healthColor;
     }
 
-    /// <summary>
-    /// Initialize the variable
-    /// </summary>
     private void Start()
     {
         HealthBarImage = GetComponent<Image>();
@@ -69,15 +70,15 @@ public class HealthBarHandler : MonoBehaviour
         }
         else if (sceneName == "BossScene")
         {
-            HealthBarHandler.SetHealthBarValue(lives);
+            SetHealthBarValue(lives);
             Debug.Log(lives);
         }
-        
+
     }
 
     void Update()
     {
-        
+
         lives = GetHealthBarValue();
     }
 }

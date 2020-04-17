@@ -15,9 +15,6 @@ public class BossMovement : MonoBehaviour
 
     void Update()
     {
-       // if (Vector2.Distance(transform.position, target.position) < 10 && Vector2.Distance(transform.position, target.position) > 0)
-       // {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-      //  }
+        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 }

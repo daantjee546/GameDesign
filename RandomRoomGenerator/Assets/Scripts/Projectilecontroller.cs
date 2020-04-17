@@ -7,14 +7,13 @@ public class Projectilecontroller : MonoBehaviour
     private float speed = 10f;
     private bool isMoving;
     private Rigidbody2D rb;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 0.75f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isMoving)

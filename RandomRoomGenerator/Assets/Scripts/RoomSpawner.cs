@@ -65,7 +65,7 @@ public class RoomSpawner : MonoBehaviour
                 }
 
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 Destroy(gameObject);
             }

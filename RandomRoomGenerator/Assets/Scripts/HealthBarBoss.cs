@@ -8,10 +8,6 @@ public class HealthBarBoss : MonoBehaviour
 {
     private static Image HealthBarImage;
 
-    /// <summary>
-    /// Sets the health bar value
-    /// </summary>
-    /// <param name="value">should be between 0 to 1</param>
     public static void SetHealthBarValue(float value)
     {
         HealthBarImage.fillAmount = value;
@@ -34,18 +30,11 @@ public class HealthBarBoss : MonoBehaviour
         return HealthBarImage.fillAmount;
     }
 
-    /// <summary>
-    /// Sets the health bar color
-    /// </summary>
-    /// <param name="healthColor">Color </param>
     public static void SetHealthBarColor(Color healthColor)
     {
         HealthBarImage.color = healthColor;
     }
 
-    /// <summary>
-    /// Initialize the variable
-    /// </summary>
     private void Start()
     {
         HealthBarImage = GetComponent<Image>();

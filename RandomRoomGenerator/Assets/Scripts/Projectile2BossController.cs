@@ -11,13 +11,6 @@ public class Projectile2BossController : MonoBehaviour
     public float attackRange;
     public float attackForce;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         try
@@ -49,11 +42,11 @@ public class Projectile2BossController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.1f);
         }
     }
