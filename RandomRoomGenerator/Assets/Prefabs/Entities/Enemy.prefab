@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb4dbdaba9e8b844ba5ae0b99a1d84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3.5
 --- !u!114 &6859078535751119774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,4 +162,4 @@ MonoBehaviour:
   attackDelay: 4
   projectile: {fileID: 8608745785028458125, guid: 783f75acc0601ee4ea35d2358600efb4,
     type: 3}
-  attackForce: 500
+  attackForce: 400

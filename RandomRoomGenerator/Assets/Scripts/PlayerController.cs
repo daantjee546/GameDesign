@@ -79,6 +79,10 @@ public class PlayerController : MonoBehaviour
         {
             HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() - 0.05f);
         }
+        if(collision.gameObject.tag == "heart")
+        {
+            HealthBarHandler.SetHealthBarValue(HealthBarHandler.GetHealthBarValue() + 0.2f);
+        }
     }
 
 }
