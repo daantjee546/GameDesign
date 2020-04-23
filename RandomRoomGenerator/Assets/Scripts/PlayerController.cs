@@ -6,18 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed;
-    private Rigidbody2D rb;
-
     public Image youDied;
-
     public GameObject projectile;
     public GameObject specialProjectile;
+    public float moveSpeed;
 
     public float offset;
     public float cooldown = 1.0f;
     public float specialCooldown = 1.0f;
 
+    private Rigidbody2D rb;
     private float nextFire;
     private float nextSpecialFire;
 

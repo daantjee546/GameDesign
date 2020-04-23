@@ -5,9 +5,8 @@ using System;
 
 public class Projectile2BossController : MonoBehaviour
 {
-    public float duplicationTime;
     public GameObject duplicatedProjectile;
-
+    public float duplicationTime;
     public float attackRange;
     public float attackForce;
 

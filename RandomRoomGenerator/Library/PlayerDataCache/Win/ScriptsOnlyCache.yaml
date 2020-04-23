@@ -14,6 +14,7 @@ ScriptsOnlyBuild:
     - Followmouse
     - HealthBarBoss
     - HealthBarHandler
+    - HeartController
     - MainMenu
     - PauseMenu
     - PlayerController
@@ -23,6 +24,7 @@ ScriptsOnlyBuild:
     - Restart
     - RoomSpawner
     - RoomTemplates
+    - SpawnHeart
     - VolumeChange
     - musicPlayer
     Unity.2D.Tilemap.Editor.dll:
@@ -90,43 +92,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11402}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12080}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12422}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12424}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12586}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12690}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 12918}
+    - Class: 114
+      Script: {instanceID: 13062}
+    - Class: 114
+      Script: {instanceID: 13212}
+    - Class: 114
+      Script: {instanceID: 13278}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -177,31 +185,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 11840}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12498}
+      Script: {instanceID: 12500}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 12980}
+      Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13212}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13244}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,51 +252,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11762}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 11892}
+      Script: {instanceID: 11894}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12078}
+      Script: {instanceID: 12080}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12162}
     - Class: 114
-      Script: {instanceID: 12208}
+      Script: {instanceID: 12210}
     - Class: 114
-      Script: {instanceID: 12242}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12586}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12690}
+      Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12720}
     - Class: 114
-      Script: {instanceID: 12734}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12744}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12808}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13130}
+      Script: {instanceID: 13134}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -340,7 +348,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: eb5d355883b27eb8d5360eaf8cf265ad
+      Hash: c5dc2b4bb097decda5be3476f8b153c0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Projectile2BossController
@@ -448,6 +456,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: f3314de280fbff7e5b232ef9d83ca357
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnHeart
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -496,13 +510,13 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: ff37df81c4976e5578c40ec32bcbb62e
+      Hash: 1dce7d100873ba635f7b46cd0df46496
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyAttack
   - hash:
       serializedVersion: 2
-      Hash: 9deab42881b83d5e5d413959b4c3c718
+      Hash: a05ecd374d13435f6008a0d968b1f6f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -776,6 +790,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HeartController
   - hash:
       serializedVersion: 2
       Hash: 274152c972478468d8321a977bbca8e3
@@ -1060,7 +1080,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: d0391331837222c7126a4c84f6b2296e
+      Hash: 846ea7b044a1f8a58d834fa343011306
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossAttack

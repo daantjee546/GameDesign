@@ -36,8 +36,6 @@ public class HealthBarHandler : MonoBehaviour
         {
 
         }
-
-
     }
 
     public static float GetHealthBarValue()
@@ -73,12 +71,10 @@ public class HealthBarHandler : MonoBehaviour
             SetHealthBarValue(lives);
             Debug.Log(lives);
         }
-
     }
 
     void Update()
     {
-
         lives = GetHealthBarValue();
     }
 }

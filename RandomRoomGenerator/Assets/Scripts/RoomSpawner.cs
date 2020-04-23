@@ -6,16 +6,11 @@ public class RoomSpawner : MonoBehaviour
 {
 
     public int openingDirecion;
-    // 1: bottom door needed
-    // 2: top door needed
-    // 3: left door needed
-    // 4: right door needed
+    public float waitTime = 4f;
 
     private RoomTemplates templates;
     private int rand;
     private bool spawned = false;
-
-    public float waitTime = 4f;
 
     private void Start()
     {
@@ -69,7 +64,6 @@ public class RoomSpawner : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
             spawned = true;
         }
     }

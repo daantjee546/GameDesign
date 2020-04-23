@@ -5,12 +5,13 @@ using System;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public GameObject projectile;
     public Transform target;
     public float attackRange;
-    private float lastAttackTime;
     public float attackDelay;
-    public GameObject projectile;
     public float attackForce;
+
+    private float lastAttackTime;
 
     void Update()
     {
@@ -44,6 +45,5 @@ public class EnemyAttack : MonoBehaviour
         {
 
         }
-        
     }
 }

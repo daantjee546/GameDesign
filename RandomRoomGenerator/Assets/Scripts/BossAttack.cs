@@ -16,6 +16,7 @@ public class BossAttack : MonoBehaviour
 
     public Transform target;
     public float attackRange;
+    public float spread;
 
     private bossStates lastAttack;
     private float lastAttackTime;
@@ -78,7 +79,6 @@ public class BossAttack : MonoBehaviour
             bossStates newAttack = (bossStates)Random.Range(1, 4);
             if (lastAttack != newAttack)
             {
-                //currentState = bossStates.attack3;
                 currentState = newAttack;
                 lastAttackTime = Time.time;
             }
@@ -119,15 +119,15 @@ public class BossAttack : MonoBehaviour
     {
         if (Time.time > lastAttack3Time + attack3Delay)
         {
+            Debug.DrawLine(transform.position, transform.up * attackRange, Color.red);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, attackRange);
 
             if (hit.transform == target)
             {
-                //transform.localRotation = Quaternion.Euler(new Vector3(Xphase * X_Angle, Yphase * Y_Angle, Zphase * Z_Angle));
-                float offset = Random.Range(-30, 30);
-                Quaternion rot = transform.rotation;
-                //rot.z = rot.z + offset;
-                GameObject newAttack = Instantiate(projectile, transform.position, rot);
+                float angle = Mathf.Atan2(transform.position.x - hit.transform.position.x, hit.transform.position.y - transform.position.y) * Mathf.Rad2Deg;
+                float offset = Random.Range(-spread, spread);
+                Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle + offset));
+                GameObject newAttack = Instantiate(projectile, transform.position, rotation);
                 newAttack.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(0f, attackForce));
             }
             lastAttack3Time = Time.time;

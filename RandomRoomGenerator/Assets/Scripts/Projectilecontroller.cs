@@ -39,7 +39,7 @@ public class Projectilecontroller : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             Destroy(this.gameObject);
-            HealthBarBoss.SetHealthBarValue(HealthBarBoss.GetHealthBarValue() - 0.05f);
+            HealthBarBoss.SetHealthBarValue(HealthBarBoss.GetHealthBarValue() - 0.03f);
         }
     }
 }

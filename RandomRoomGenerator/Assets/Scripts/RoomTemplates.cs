@@ -10,12 +10,11 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] rightRooms;
 
     public GameObject closedRoom;
-
     public List<GameObject> rooms;
-
     public float waitTime;
-    private bool spawnedBoss;
     public GameObject boss;
+
+    private bool spawnedBoss;
 
     private void Update()
     {
