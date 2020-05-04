@@ -13,11 +13,16 @@ public class EnemyAttack : MonoBehaviour
 
     private float lastAttackTime;
 
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
     void Update()
     {
         try
         {
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            
             float distanceToPlayer = Vector3.Distance(transform.position, target.position);
             if (distanceToPlayer < attackRange)
             {
